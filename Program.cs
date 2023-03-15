@@ -30,21 +30,41 @@
 
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
+// int ReadInt(string text)
+// {
+//     System.Console.Write(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[] a = new int[3];
+// int[] b = new int[3];
+
+// a[0] = ReadInt("Введите координату х точки а ");
+// a[1] = ReadInt("Введите координату y точки а ");
+// a[2] = ReadInt("Введите координату z точки а ");
+// b[0] = ReadInt("Введите координату х точки b ");
+// b[1] = ReadInt("Введите координату y точки b ");
+// b[2] = ReadInt("Введите координату z точки b ");
+
+// double res = Math.Round(Math.Sqrt(Math.Pow(a[0]-b[0], 2)+ Math.Pow(a[1]-b[1], 2)+Math.Pow(a[2]-b[2], 2)),2);
+// System.Console.WriteLine("Растояние между точками  =" + res);
+
+// Задача 23
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
 int ReadInt(string text)
 {
     System.Console.Write(text);
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int[] a = new int[3];
-int[] b = new int[3];
+int number = ReadInt("Введите число: ");
 
-a[0] = ReadInt("Введите координату х точки а ");
-a[1] = ReadInt("Введите координату y точки а ");
-a[2] = ReadInt("Введите координату z точки а ");
-b[0] = ReadInt("Введите координату х точки b ");
-b[1] = ReadInt("Введите координату y точки b ");
-b[2] = ReadInt("Введите координату z точки b ");
-
-double res = Math.Round(Math.Sqrt(Math.Pow(a[0]-b[0], 2)+ Math.Pow(a[1]-b[1], 2)+Math.Pow(a[2]-b[2], 2)),2);
-System.Console.WriteLine("Растояние между точками  =" + res);
+for (int i = 1; i <= number; i++)
+{
+    System.Console.Write(Math.Pow(i, 3) + " ");
+}
